@@ -1,2 +1,3 @@
-# launch-countdown-timer
-Simple web page using HTML, CSS and JavaScript
+# Launch countdown timer
+
+Simple web component using HTML, CSS (OOCSS + BEM) and JavaScript
