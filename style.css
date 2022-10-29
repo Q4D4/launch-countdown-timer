@@ -21,7 +21,7 @@ body {
 	align-items: center;
 	background-color: var(--darker-blue);
 	background-image: url('./images/bg-stars.svg');
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 	font-family: var(--ff-red-hat-text);
 	font-size: 14px;
@@ -118,6 +118,7 @@ body {
 	position: absolute;
 	left: 0;
 	bottom: 0;
+	margin-bottom: -75px;
 	background-image: url('./images/pattern-hills.svg');
 	background-repeat: no-repeat;
 	background-position: right;
@@ -141,10 +142,6 @@ body {
 }
 
 @media (min-width: 576px) {
-	body {
-		background-size: contain;
-	}
-
 	.box {
 		margin-right: 20px;
 	}
@@ -187,6 +184,7 @@ body {
 		min-height: 200px;
 		background-position: bottom;
 		background-size: 100% 100%;
+		margin-bottom: initial;
 	}
 
 	.footer__social-icons {
