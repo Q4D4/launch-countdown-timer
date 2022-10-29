@@ -5,36 +5,61 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="David Kadaria" />
-
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
-
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<!-- CSS -->
 		<link rel="stylesheet" href="./theme.css" />
 		<link rel="stylesheet" href="./style.css" />
-
+		<!-- Title -->
 		<title>Launch countdown timer</title>
 	</head>
 	<body>
 		<header role="banner" class="header">
 			<h1 class="header__heading">We're launching soon</h1>
 		</header>
-		<main role="main">Days Hours Minutes Seconds</main>
-		<footer role="contentinfo"></footer>
-		<img
-			src="./images/pattern-hills.svg"
-			alt="Hills"
-			class="bottom-decoration"
-		/>
-
-		<!-- <div class="attribution">
-			Challenge by
-			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-				>Frontend Mentor</a
-			>. Coded by <a href="#">Your Name Here</a>.
-		</div> -->
+		<main role="main" class="main">
+			<div class="box">
+				<div class="box__content">
+					<h3 class="box__value" data-id="days">00</h3>
+					<div class="box__overlay"></div>
+				</div>
+				<div class="box__caption">Days</div>
+			</div>
+			<div class="box">
+				<div class="box__content">
+					<h3 class="box__value" data-id="hours">00</h3>
+					<div class="box__overlay"></div>
+				</div>
+				<div class="box__caption">Hours</div>
+			</div>
+			<div class="box">
+				<div class="box__content">
+					<h3 class="box__value" data-id="minutes">00</h3>
+					<div class="box__overlay"></div>
+				</div>
+				<div class="box__caption">Minutes</div>
+			</div>
+			<div class="box">
+				<div class="box__content">
+					<h3 class="box__value" data-id="seconds">00</h3>
+					<div class="box__overlay"></div>
+				</div>
+				<div class="box__caption">Seconds</div>
+			</div>
+		</main>
+		<footer role="contentinfo" class="footer">
+			<div class="footer__social-icons">
+				<a href="#" class="social-icon">
+					<img src="./images/icon-facebook.svg" alt="Facebook" />
+				</a>
+				<a href="#" class="social-icon">
+					<img src="./images/icon-pinterest.svg" alt="Pinterest" />
+				</a>
+				<a href="#" class="social-icon">
+					<img src="./images/icon-instagram.svg" alt="Instagram" />
+				</a>
+			</div>
+		</footer>
+		<!-- JavaScript -->
+		<script src="./main.js"></script>
 	</body>
 </html>

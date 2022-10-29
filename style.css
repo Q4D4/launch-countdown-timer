@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -12,23 +14,182 @@ body {
 	width: 100%;
 	height: 100%;
 	min-height: 100vh;
+	padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	background-color: var(--darker-blue);
 	background-image: url('./images/bg-stars.svg');
 	background-size: cover;
 	background-position: center;
+	font-family: var(--ff-red-hat-text);
+	font-size: 14px;
 }
 
-.bottom-decoration {
-	position: fixed;
-	bottom: 0;
-	left: 0;
+.header {
 	width: 100%;
-	/* height: 100%; */
-	/* object-fit: cover; */
+	text-align: center;
+	margin-top: -150px;
+	padding-bottom: 50px;
+}
+
+.header__heading {
+	color: var(--white);
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+}
+
+.box {
+	margin-right: 15px;
+}
+
+.box:last-child {
+	margin-right: 0;
+}
+
+.box__content {
+	width: 70px;
+	position: relative;
+	padding: 8px 12px;
+	text-align: center;
+	background-color: var(--dark-desaturated-blue);
+	overflow: hidden;
+	border-radius: 4px;
+}
+
+.box__content::before,
+.box__content::after {
+	content: '';
+	width: 4px;
+	height: 4px;
+	position: absolute;
+	top: calc(50% - 2px);
+	background-color: var(--darkest-blue);
+	border-radius: 50%;
+}
+
+.box__content::before {
+	left: -2px;
+}
+
+.box__content::after {
+	right: -2px;
+}
+
+.box__value {
+	font-size: 40px;
+	color: var(--soft-red);
+}
+
+.box__overlay {
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--darker-blue);
+	opacity: 0.5;
+	border-bottom: 1px solid var(--darkest-blue);
+}
+
+.box__caption {
+	padding-top: 15px;
+	color: var(--grayish-blue);
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 8px;
+	letter-spacing: 2px;
+}
+
+.footer {
+	width: 100%;
+	height: auto;
+	min-height: 150px;
+	display: flex;
+	align-items: flex-end;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-image: url('./images/pattern-hills.svg');
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: cover;
+}
+
+.footer__social-icons {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 30px;
+}
+
+.social-icon {
+	margin: 0 10px;
+}
+
+.social-icon:hover {
+	filter: invert(52%) sepia(58%) saturate(2528%) hue-rotate(312deg) brightness(104%)
+		contrast(97%);
 }
 
 @media (min-width: 576px) {
 	body {
 		background-size: contain;
+	}
+
+	.box {
+		margin-right: 20px;
+	}
+
+	.box__content {
+		width: 110px;
+		padding: 10px 15px;
+		border-radius: 5px;
+	}
+
+	.box__content::before,
+	.box__content::after {
+		width: 8px;
+		height: 8px;
+		top: calc(50% - 4px);
+	}
+
+	.box__content::before {
+		left: -4px;
+	}
+
+	.box__content::after {
+		right: -4px;
+	}
+
+	.box__value {
+		font-size: 66px;
+	}
+
+	.box__overlay {
+		border-bottom-width: 2px;
+	}
+
+	.box__caption {
+		padding-top: 20px;
+		font-size: 10px;
+	}
+
+	.footer {
+		min-height: 200px;
+		background-position: bottom;
+		background-size: 100% 100%;
+	}
+
+	.footer__social-icons {
+		padding-bottom: 60px;
 	}
 }
